@@ -1,0 +1,264 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(2,6,23,0.95);
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo span {
+  color: #38bdf8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-cv {
+  background: #38bdf8;
+  color: #020617;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-cv:hover {
+  background: #0ea5e9;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+.hero-text h1 {
+  font-size: clamp(32px, 5vw, 52px);
+}
+
+.hero-text h1 span {
+  color: #38bdf8;
+}
+
+.hero-text h3 {
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.hero-text p {
+  max-width: 600px;
+  margin: 0 auto 30px auto; /* space below the paragraph */
+  text-align: justify; /* optional if you want justified text */
+}
+
+
+.hero .btn {
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+/* About Section */
+.about p {
+  max-width: 700px;
+  margin: auto;
+  text-align: justify; /* <-- This justifies the text */
+}
+
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+  gap: 15px;
+}
+
+.skills-grid div {
+  background: #020617;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #020617;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card h3 {
+  padding: 12px 10px;
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.contact-card {
+  background: #020617;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  flex: 1 1 200px;
+  min-width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #38bdf8;
+}
+
+.contact-card a {
+  color: white;
+  text-decoration: none;
+  word-break: break-word;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  color: #0ea5e9;
+}
+
+
+/* FOOTER */
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #1e293b;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #020617;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .nav-links.show{
+    display: flex;
+  }
+
+  .hamburger{
+    display: block;
+  }
+}
