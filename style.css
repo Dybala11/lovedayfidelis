@@ -60,12 +60,116 @@ nav {
   background: #0ea5e9;
 }
 
-/* HAMBURGER MENU */
+/* Hamburger */
 .hamburger {
   display: none;
-  font-size: 28px;
+  flex-direction: column;
+  gap: 5px;
   cursor: pointer;
 }
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Profile Panel */
+.profile-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  background: #020617;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
+  transition: 0.35s ease;
+  z-index: 9999;
+}
+
+.profile-panel.show {
+  right: 0;
+}
+
+.profile-box {
+  padding: 25px;
+  text-align: center;
+}
+
+.close-profile {
+  position: absolute;
+  right: 18px;
+  top: 15px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  object-fit: cover;
+  margin: 20px 0 10px;
+}
+
+.profile-box h3 {
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+.profile-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.whatsapp-btn img {
+  width: 26px;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+  display: flex;   /* FORCE show */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
 
 /* HERO */
 .hero {
@@ -131,8 +235,8 @@ h2 {
 /* SKILLS */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
-  gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
 
 .skills-grid div {
@@ -144,7 +248,12 @@ h2 {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -177,6 +286,34 @@ h2 {
 
 .project-card:hover img {
   transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
+  animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
 }
 
 
@@ -242,6 +379,7 @@ footer {
 }
 
 /* MOBILE RESPONSIVE */
+
 @media(max-width:768px){
   .nav-links{
     position: absolute;
@@ -260,5 +398,28 @@ footer {
 
   .hamburger{
     display: block;
+  }
+}
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
