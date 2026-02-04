@@ -11,21 +11,47 @@
 <body>
 
 <header>
-  <nav>
-    <h4 class="logo">Dyb <span>ala</span></h4>
+<nav>
+  <h4 class="logo">Dyb<span>ala</span></h4>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="cv/Loveday_Fidelis_ L_ Resume.pdf" class="btn-cv" download><span>Download CV</span></a></li>
-    </ul>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="cv.pdf" class="btn-cv" download>Download CV</a></li>
+  </ul>
 
-    <div class="hamburger" id="hamburger">☰</div>
-  </nav>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
 </header>
+
+<!-- Profile Panel -->
+<div class="profile-panel" id="profilePanel">
+  <div class="profile-box">
+    <span class="close-profile" id="closeProfile">&times;</span>
+
+    <img src="picture hamg.jfif" alt="Profile" class="profile-img">
+
+    <h3>Loveday Fidelis</h3>
+    <p>
+      I’m a passionate Graphic & Web Designer focused on creating modern, user-friendly, and visually compelling digital experiences that help brands stand out.
+    </p>
+
+    <div class="whatsapp-box">
+  <a href="https://wa.me/message/VPHCCHTNHIGLI1" target="_blank" class="whatsapp-btn">
+    <img src="whatsapp icon.png" alt="WhatsApp">
+    <span>Chat on WhatsApp</span>
+  </a>
+</div>
+
+  </div>
+</div>
 
 <section class="hero" id="home">
   <div class="hero-text">
@@ -57,7 +83,9 @@ both structurted corporate environments and fast-paced tech support settings.
     <div>CorelDRAW</div>
     <div>Canva</div>
     <div>WordPress</div>
-  </div>
+    <div>Cyber Security Analyst</div>
+    <div>Translator</div>
+     </div>
 </section>
 
 <section class="projects" id="projects">
@@ -65,22 +93,42 @@ both structurted corporate environments and fast-paced tech support settings.
 
   <div class="projects-grid">
     <div class="project-card">
-      <img src="project3.png" alt="Portfolio Website">
+      <img src="project3.png" alt="Project 1" onclick="openLightbox(this.src)">
       <h3>Portfolio Website</h3>
     </div>
 
     <div class="project-card">
-      <img src="project 1.jpg" alt="Business Website">
+      <img src="project 1.jpg" alt="Project 2" onclick="openLightbox(this.src)">
       <h3>Business Website</h3>
     </div>
 
     <div class="project-card">
-      <img src="project 2.jpeg" alt="Brand Identity">
+     <img src="project 2.jpeg" alt="Project 3" onclick="openLightbox(this.src)">
       <h3>Brand Identity</h3>
+    </div>
+
+     <div class="project-card">
+      <img src="project4.jfif" alt="Project 4" onclick="openLightbox(this.src)">
+      <h3>Graphic Design</h3>
+    </div>
+
+    <div class="project-card">
+      <img src="Web3 compressed.jpg" alt="Project 5" onclick="openLightbox(this.src)">
+      <h3>Web3</h3>
+    </div>
+
+        <div class="project-card">
+      <img src="image 6.jpg" alt="Project 6" onclick="openLightbox(this.src)">
+      <h3>Translator</h3>
     </div>
 
     <!-- Add more projects as needed -->
   </div>
+
+      <!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Project Preview" id="lightbox-img">
+</div>
 </section>
 
 
