@@ -1,6 +1,18 @@
 // Hamburger menu toggle
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
+const profilePanel = document.getElementById("profilePanel");
+const closeProfile = document.getElementById("closeProfile");
+
+hamburger.addEventListener("dblclick", () => {
+  profilePanel.classList.add("show");
+});
+
+closeProfile.addEventListener("click", () => {
+  profilePanel.classList.remove("show");
+});
+
+
 
 hamburger.onclick = () => navLinks.classList.toggle("show");
 
@@ -14,6 +26,17 @@ const observer = new IntersectionObserver(entries => {
 },{threshold:0.2});
 
 document.querySelectorAll("section").forEach(el => observer.observe(el));
+function openLightbox(src) {
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+
+  img.src = src;
+  lightbox.style.display = "flex";
+}
+
+document.getElementById("lightbox").addEventListener("click", function() {
+  this.style.display = "none";
+});
 
 // --------------------
 // EmailJS Contact Form
