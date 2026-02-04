@@ -84,12 +84,7 @@ nav {
   border-radius: 3px;
 }
 
-/* Show hamburger on mobile */
-@media (max-width: 900px) {
-  .hamburger {
-    display: flex;
-  }
-}
+
 
 /* Profile Panel */
 .profile-panel {
@@ -387,84 +382,18 @@ footer {
   transform: translateY(0);
 }
 
-/* MOBILE RESPONSIVE */
 
-/* Desktop menu */
-nav ul {
-  display: flex;
-  gap: 20px;
+ /* Hamburger Menu */
+.hamburger {
+  display: flex;   /* FORCE show */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-/* Hide desktop links on mobile */
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* hide links */
-  }
-}
-
-
-@media(max-width:768px){
-  .nav-links{
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #020617;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
-    display: none;
-  }
-
-  .nav-links.show{
-    display: flex;
-  }
-
-  .hamburger{
-    display: block;
-  }
-}
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  nav {
-    position: absolute;
-    top: 60px; /* below header */
-    right: 0;
-    background: #0b0f23;
-    width: 100%;
-    display: none; /* hidden by default */
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
 }
