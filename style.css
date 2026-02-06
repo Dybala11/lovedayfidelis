@@ -85,80 +85,6 @@ nav {
 }
 
 
-
-/* Profile Panel */
-.profile-panel {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: min(90%, 320px);
-  height: 100vh;
-  background: #020617;
-  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
-  transition: 0.35s ease;
-  z-index: 99999;
-}
-
-.profile-panel.show {
-  right: 0;
-}
-
-.profile-box {
-  padding: 25px;
-  text-align: center;
-}
-
-.close-profile {
-  position: absolute;
-  right: 18px;
-  top: 15px;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-.profile-img {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 3px solid #38bdf8;
-  object-fit: cover;
-  margin: 20px 0 10px;
-}
-
-.profile-box h3 {
-  color: #38bdf8;
-  margin-bottom: 6px;
-}
-
-.profile-box p {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.whatsapp-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.whatsapp-btn img {
-  width: 26px;
-}
-
-.whatsapp-btn:hover {
-  background: #1ebe5d;
-}
-
-
 /* Hamburger Menu */
 .hamburger {
   display: flex;   /* FORCE show */
@@ -363,6 +289,19 @@ h2 {
   color: #0ea5e9;
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
 
 /* FOOTER */
 footer {
@@ -371,6 +310,7 @@ footer {
   padding: 20px;
   border-top: 1px solid #1e293b;
 }
+
 
 /* SCROLL ANIMATION */
 .reveal {
@@ -413,9 +353,10 @@ footer {
     justify-content: center;
     gap: 25px;
     transition: 0.3s ease;
+    z-index: 9999;
   
   }
-  
+
   .nav-links {
   z-index: 9999;
 }
