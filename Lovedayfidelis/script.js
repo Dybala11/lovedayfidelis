@@ -1,21 +1,22 @@
 // Hamburger menu toggle
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+hamburger.onclick = () => navLinks.classList.toggle("show");
 const profilePanel = document.getElementById("profilePanel");
 const closeProfile = document.getElementById("closeProfile");
 
-hamburger.addEventListener("dblclick", () => {
+function openProfile() {
   profilePanel.classList.add("show");
-});
+}
 
 closeProfile.addEventListener("click", () => {
   profilePanel.classList.remove("show");
+  
 });
-
-
-
-hamburger.onclick = () => navLinks.classList.toggle("show");
-
 // Scroll reveal animation
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
