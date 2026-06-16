@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LovedayFidelis | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+<nav>
+  <h4 class="logo" onclick="openProfile()">Dyb<span>ala</span></h4>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <a href="Loveday_Fidelis_L_Resume.pdf" class="btn-cv" download>
+  Download CV
+</a>
+  </ul>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+</header>
+
+
+  </div>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Loveday Fidelis</span></h1>
+    <h4>Graphic/Web Designer, ICT Support </h4>
+    <p>I create modern, functional, and responsive digital experiences.</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>
+   Motivated and creative Front-End developer with strong background in HTML, CSS, JavaScript, and PHP, alongside
+hands-on experience in graphic design using Adobe Photoshop and CorelDRAW. Known for delivering responsive and visually
+appealing user interfaces. Strong communicator and team player with a track record of working in
+both structurted corporate environments and fast-paced tech support settings.
+  </p>
+</section>
+
+<section class="skills" id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div>Tutor</div>
+    <div>B.E.D</div>
+    <div>Admin</div>
+    <div>Developer</div>
+    <div>Influencer</div>
+    <div>Graphics Design</div>
+    <div>Consultant</div>
+    <div>ICT Support</div>
+    <div>Analyst</div>
+    <div>Translator</div>
+     </div>
+</section>
+
+<section class="projects" id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="project3.png" alt="Project 1" onclick="openLightbox(this.src)">
+      <h3>Portfolio Website</h3>
+    </div>
+
+    <div class="project-card">
+      <img src="project 1.jpg" alt="Project 2" onclick="openLightbox(this.src)">
+      <h3>Business Website</h3>
+    </div>
+
+    <div class="project-card">
+     <img src="project 2.jpeg" alt="Project 3" onclick="openLightbox(this.src)">
+      <h3>Brand Identity</h3>
+    </div>
+
+     <div class="project-card">
+      <img src="project4.jfif" alt="Project 4" onclick="openLightbox(this.src)">
+      <h3>Graphic Design</h3>
+    </div>
+
+    <div class="project-card">
+      <img src="project5.jfif"Project 5" onclick="openLightbox(this.src)">
+      <h3>ICT Support</h3>
+    </div>
+
+        <div class="project-card">
+      <img src="image 6.jpg" alt="Project 6" onclick="openLightbox(this.src)">
+      <h3>Translator</h3>
+    </div>
+
+         <div class="project-card">
+      <img src="church website.jpg" alt="Project 7" onclick="openLightbox(this.src)">
+      <h3>Church Website</h3>
+    </div>
+
+         <div class="project-card">
+      <img src="Institute website.jpg" alt="Project 8" onclick="openLightbox(this.src)">
+      <h3>Institute Website</h3>
+    </div>
+    
+
+         <div class="project-card">
+      <img src="oil toolwebsite.jpg" alt="Project 9" onclick="openLightbox(this.src)">
+      <h3>Oil Tool Website</h3>
+    </div>
+
+       <div class="project-card">
+      <img src="Phone website.jpg" alt="Project 10" onclick="openLightbox(this.src)">
+      <h3>Phone Website</h3>
+    </div>
+
+         <div class="project-card">
+      <img src="Saloon website.jpg" alt="Project 11" onclick="openLightbox(this.src)">
+      <h3>Saloon Website</h3>
+    </div>
+    
+
+         <div class="project-card">
+      <img src="Scaffold  website.jpg" alt="Project 12" onclick="openLightbox(this.src)">
+      <h3>Scaffold Website</h3>
+    </div>
+    
+        <div class="project-card">
+      <img src="kitchen web.jpg" alt="Project 13" onclick="openLightbox(this.src)">
+      <h3>Kitchen Website</h3>
+    </div>
+
+         <div class="project-card">
+      <img src="perf web.jpg" alt="Project 14" onclick="openLightbox(this.src)">
+      <h3>Perfume Website</h3>
+    </div>
+    
+
+         <div class="project-card">
+      <img src="logistic web.jpg" alt="Project 15" onclick="openLightbox(this.src)">
+      <h3>Logistics Website</h3>
+    </div>
+    <!-- Add more projects as needed -->
+  </div>
+
+      <!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Project Preview" id="lightbox-img">
+</div>
+</section>
+
+
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+
+  <div class="contact-info">
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p><a href="mailto:yourmail@gmail.com">info@duotech.com.ng</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Phone</h3>
+      <p><a href="tel:+1234567890">+2348140436064</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>LinkedIn</h3>
+      <p><a href="https://www.linkedin.com/in/yourprofile" target="_blank">http://linkedln.com/in/fidelisloveday/in/yourprofile</a></p>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/2348140436064" class="whatsapp-float" target="_blank">
+  💬 Hire me
+</a>
+
+<footer>
+  <p>© 2019 DUOTECH HUBS. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
